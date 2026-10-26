@@ -1,18 +1,36 @@
-# IoT Climate Monitor
+# IoT Climate Monitor Firmware
 
-Zephyr RTOS firmware for the IoT climate monitoring sensor module.
+Firmware for the IoT climate monitoring sensor module developed using Zephyr RTOS.
 
-## Current status
-Initial project structure created.
+## Project Overview
 
-## Planned hardware
-- HDC3022 temperature / humidity sensor
-- OPT4001 illuminance sensor
-- STM32 microcontroller
-- LoRa module
+This firmware supports a distributed sensor module that measures:
 
-## Development environment
-- Ubuntu 26.04 LTS via WSL2
-- Zephyr RTOS
-- VS Code
-- Git / GitHub
+- Temperature
+- Relative humidity
+- Illuminance
+- Dew point
+
+The temperature and humidity subsystem uses the Texas Instruments HDC3022DEJR sensor over I2C.
+
+## Development Environment
+
+- Operating System: Ubuntu 26.04 LTS
+- Zephyr Version: v4.5.0-rc2-179-gf78c4deb452
+- west Version: v1.5.0
+- Zephyr SDK Version: 1.0.1
+- Target MCU: STM32U575RIT6Q
+- RTOS: Zephyr
+
+## Project Structure
+
+```text
+iot_climate_monitor/
+├── src/
+│   └── main.c
+├── boards/
+├── docs/
+├── CMakeLists.txt
+├── prj.conf
+├── README.md
+└── .gitignore 
